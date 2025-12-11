@@ -4,6 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: sparky-container
+    ports:
+      - 4040:4040
     volumes:
       - ./src/sparky:/code/sparky
       - ./tests:/code/tests

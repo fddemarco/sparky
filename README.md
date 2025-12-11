@@ -17,6 +17,14 @@ This will build and start a Docker container preconfigured with:
 
 After the container starts, you will automatically be placed inside an interactive shell.
 
+Once you're in the interactive shell, you can access the Spark shell by running the following command:
+
+```sh
+bash /opt/spark/bin/pyspark
+```
+
+Once you're running the Spark shell, you can access the Spark UI on your localhost through port 4040.
+
 ### Teardown
 
 To shut down and clean up the running container, use:
