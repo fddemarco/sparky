@@ -1,0 +1,16 @@
+services:
+  sparky:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sparky-container
+    volumes:
+      - ./src/sparky:/code/sparky
+      - ./tests:/code/tests
+    tty: true
+    stdin_open: true
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "20"
